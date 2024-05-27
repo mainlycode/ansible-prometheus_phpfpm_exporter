@@ -25,7 +25,7 @@ ExecStart=/usr/local/bin/phpfpm_exporter server \
 {%   if phpfpm_exporter_log_level|length %}
     --log.level {{ phpfpm_exporter_log_level }} \
 {%   endif -%}
-
+    --
 SyslogIdentifier=phpfpm_exporter
 Restart=always
 RestartSec=1
